@@ -20,7 +20,7 @@
 }
 @font-face {
   font-family: "proxima_nova_light";
-  src: url(/fonts/Proximanova-fonts-master/converted_fonts/proxima_nova_light.woff),
+  src: url(/fonts/Proximanova-fonts-master/converted_fonts/proxima_nova_light.woff)
     url(/fonts/Proximanova-fonts-master/converted_fonts/proxima_nova_light.woff2);
 }
 @font-face {
@@ -135,7 +135,7 @@ body {
 }
 
 .player .time-line .fill{
-    width: 50%;
+    width:0%;
     height: 100%;
     background-color: #fff;
     position: absolute;
@@ -148,7 +148,7 @@ body {
     border-radius: 50%;
     position: absolute;
     top: -4px;
-    left: 50%;
+    left: 0%;
 }
 .player .under-time-line{
     width: 100%;
