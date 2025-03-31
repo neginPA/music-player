@@ -12,7 +12,7 @@
 <body>
     <div class="bg-image"></div>
     <div class="music-player">
-        <audio src="./musics/Evanescence-Hello-128.mp3" id="audio" controls></audio>
+        <audio src="./musics/Evanescence-Hello-128.mp3" id="audio"></audio>
         <div class="header">
             <div class="image">
                 <img src="./images/6123.avif" alt="song-pic">
@@ -26,10 +26,12 @@
             <div class="clear"></div>
         </div>
         <div class="player">
-            <div class="time-line">
+            <div class="time-line" id="time-line">
                 <div class="background"></div>
                 <div id="fill" class="fill"></div>
                 <div id="fill-btn" class="fill-btn"></div>
+                <div id="left-width-time-line"></div>
+                <div id="right-width-time-line"></div>
 
             </div>
             <div class="under-time-line">
@@ -38,10 +40,21 @@
 
             </div>
             <div class="buttons">
-                <button class="btn"><img id="back-btn" src="./images/music-music-player-player-2-svgrepo-com (1).svg" alt="back"></button>
+                <button class="btn"><img id="back-btn" src="./images/rewind-5-seconds-back-svgrepo-com.svg" alt="back"></button>
                 <button class="btn"><img id="play-pause" src="./images/music-play-play-button-svgrepo-com (1).svg" onclick=" play_and_pause()" alt="play"></button>
-                <button class="btn"><img id="next-btn" src="./images/music-next-next-button-svgrepo-com (1).svg" alt="next"></button>
+                <button class="btn"><img id="next-btn" src="./images/rewind-5-seconds-forward-svgrepo-com (1).svg" alt="next"></button>
 
+            </div>
+            <div class="volume-style">
+                <div class="volume" id="volume">
+                    <div class="background"></div>
+                    <div class="fill" ></div>
+                    <div class="fill-btn" ></div>
+                    <div id="left-width-volume"></div>
+                    <div id="right-width-volume"></div>
+                    <div id="volume-value">100</div>
+    
+                </div>
             </div>
         </div>
     </div>

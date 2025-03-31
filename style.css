@@ -150,6 +150,16 @@ body {
     top: -4px;
     left: 0%;
 }
+
+#left-width-time-line{
+    position: absolute;
+    left: 0;
+}
+#right-width-time-line{
+    position: absolute;
+    right: 0;
+}
+
 .player .under-time-line{
     width: 100%;
     margin-top: 10px;
@@ -194,4 +204,57 @@ body {
     width: 70px;
     height: 70px;
     margin-left: 100px;
+}
+
+.player .volume-style{
+    width: calc(100% - 200px);
+    padding: 0 100px;
+}
+
+.player .volume{
+    width: 100%;
+    height: 2px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.player .volume .background{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(135, 133, 133) ;
+}
+
+.player .volume .fill{
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top:0;
+}
+.player .volume .fill-btn{
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: 100%;
+}
+
+#left-width-volume{
+    position: absolute;
+    left: 0;
+}
+#right-width-volume{
+    position: absolute;
+    right: 0;
+}
+
+#volume-value{
+    color: #fff;
+    font-size: 13px;
+    
+    position: absolute;
+    right: -50px;
+    top:-6.5px ;
 }
