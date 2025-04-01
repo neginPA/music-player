@@ -258,3 +258,69 @@ body {
     right: -50px;
     top:-6.5px ;
 }
+
+
+@media (min-width: 990px) {
+    body{
+      width:1500px;
+      margin: 0 auto;
+    }
+    .bg-image{
+        width: 1500px;
+        
+       
+      }
+    
+    
+  }
+
+
+
+
+
+@media (max-width: 990px) {
+  body{
+    width: 1400px;
+    margin:0 auto;
+  }
+  .bg-image{
+    width: 1400px;
+    
+   
+  }
+  
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  body{
+    width:1300px;
+    margin:0  auto;
+  }
+  .bg-image{
+    width: 1300px;
+   
+    
+  }
+  
+  
+}
+
+
+
+@media (max-width: 575px) {
+  body{
+    width: 1200px;
+    margin:0 auto;
+    
+  }
+  .bg-image{
+    width: 1200px;
+    
+    
+  }
+  
+}
