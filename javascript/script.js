@@ -30,6 +30,22 @@ function change_format(time){
     }
 }
 
+function next_5(){
+    if (audio.currentTime + 5 > audio.duration){
+         audio.currentTime = audio.duration;
+    }else audio.currentTime += 5;
+}
+
+function back_5(){
+    if (audio.currentTime - 5 < 0){
+         audio.currentTime = 0;
+    }else audio.currentTime -= 5;
+}
+
+
+slider("volume", "volume");
+slider("time-line", "time-line", function(){audio.pause()}, function(){if (played) audio.play();});
+
 audio.addEventListener("timeupdate",function(){
     fill.style.width = (audio.currentTime * 100 / audio.duration) + "%";
     fill_btn.style.left = (audio.currentTime * 100 / audio.duration) + "%";

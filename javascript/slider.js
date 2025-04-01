@@ -2,8 +2,8 @@ function slider(action, id , mousedown=function(){}, mouseup=function(){}){
     const parent = document.getElementById(id);
     const fill = parent.getElementsByClassName("fill")[0];
     const fill_btn = parent.getElementsByClassName("fill-btn")[0];
-    const can_drag = false;
-    const value = 0;
+    let can_drag = false;
+    let value = 0;
 
     function update(){
         let pos_x = window.event.clientX;
@@ -22,7 +22,34 @@ function slider(action, id , mousedown=function(){}, mouseup=function(){}){
         fill.style.width = (value * 100) + "%";
         fill_btn.style.left = (value * 100) + "%";
 
+        if (action == "time-line"){
+            audio.currentTime = audio.duration * value;
+        }
+        else if (action == "volume"){
+            audio.volume = value;
+            document.getElementById("volume-value").innerText = parseInt(value * 100);
+        }
+
     }
+
+    parent.addEventListener("mousedown", function(e){
+        if (e.button == 0){
+            can_drag = true;
+            mousedown();
+        }
+    });
+
+    document.body.addEventListener("mousemove", function(e){
+        if (e.button == 0 && can_drag)
+            update();
+    });
+
+    document.body.addEventListener("mouseup", function(e){
+        if (e.button == 0 && can_drag){
+            can_drag = false;
+            mouseup();
+        }
+    });
 
     parent.addEventListener("click", function(e){
         if(e.button == 0){
